@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntCodeComputerGraphical", "IntCodeComputerGraphical\IntCodeComputerGraphical.csproj", "{F3B8F6B1-B793-48D2-8EDF-F3F35169EFAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntCodeComputer", "..\IntCodeComputer\IntCodeComputer\IntCodeComputer.csproj", "{6EEDFCFF-8DF2-4517-9535-08D1F427A706}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntCodeComputer", "IntCodeComputer\IntCodeComputer\IntCodeComputer.csproj", "{6EEDFCFF-8DF2-4517-9535-08D1F427A706}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntCodeComputerTests", "IntCodeComputer\IntCodeComputerTests\IntCodeComputerTests.csproj", "{0A0AFEF1-383D-4E44-B74D-3BFB65D657B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,14 @@ Global
 		{6EEDFCFF-8DF2-4517-9535-08D1F427A706}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6EEDFCFF-8DF2-4517-9535-08D1F427A706}.Release|x86.ActiveCfg = Release|Any CPU
 		{6EEDFCFF-8DF2-4517-9535-08D1F427A706}.Release|x86.Build.0 = Release|Any CPU
+		{0A0AFEF1-383D-4E44-B74D-3BFB65D657B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A0AFEF1-383D-4E44-B74D-3BFB65D657B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A0AFEF1-383D-4E44-B74D-3BFB65D657B5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0A0AFEF1-383D-4E44-B74D-3BFB65D657B5}.Debug|x86.Build.0 = Debug|Any CPU
+		{0A0AFEF1-383D-4E44-B74D-3BFB65D657B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A0AFEF1-383D-4E44-B74D-3BFB65D657B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A0AFEF1-383D-4E44-B74D-3BFB65D657B5}.Release|x86.ActiveCfg = Release|Any CPU
+		{0A0AFEF1-383D-4E44-B74D-3BFB65D657B5}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

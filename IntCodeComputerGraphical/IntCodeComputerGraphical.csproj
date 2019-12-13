@@ -62,8 +62,8 @@
     <None Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\IntCodeComputer\IntCodeComputer\IntCodeComputer.csproj">
-      <Project>{6eedfcff-8df2-4517-9535-08d1f427a706}</Project>
+    <ProjectReference Include="..\IntCodeComputer\IntCodeComputer\IntCodeComputer.csproj">
+      <Project>{6EEDFCFF-8DF2-4517-9535-08D1F427A706}</Project>
       <Name>IntCodeComputer</Name>
     </ProjectReference>
   </ItemGroup>
