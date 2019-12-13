@@ -116,7 +116,13 @@ namespace IntCodeComputer {
                     var coords = new Tuple<long, long>(x, y);
 
                     if (gameGrid.ContainsKey(coords)) {
-                        if (gameGrid[coords] != 0) {
+                        if(gameGrid[coords] == 3) {
+                            spriteBatch.Draw(texture, new Rectangle((int)x * ts, (int)y * ts, ts, ts / 2), Color.White);
+                        }
+                        else if (gameGrid[coords] == 4) {
+                            spriteBatch.Draw(texture, new Rectangle((int)x * ts, (int)y * ts, ts / 2, ts / 2), Color.White);
+                        }
+                        else if (gameGrid[coords] != 0) {
                             spriteBatch.Draw(texture, new Rectangle((int)x * ts, (int)y * ts, ts, ts), Color.White);
                         }
 

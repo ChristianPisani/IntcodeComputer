@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 
@@ -18,8 +20,15 @@ namespace IntCodeComputer {
         int panelsWidth = 200;
         int panelsHeight = 200;
 
-        public PaintRobot(Computer computer) {
+        CalculationResult calculationResult1;
+        CalculationResult calculationResult2;
+
+        public PaintRobot(Computer computer, List<int> userInputs = null) {
             this.computer = computer;
+
+            calculationResult1 = computer.Calculate(userInputs, returnOnOutPut: true);
+            calculationResult2 = computer.Calculate(returnOnOutPut: true);
+
             panelsDrawn = new List<Tuple<int, int>>();
 
             panels = new List<List<string>>();
@@ -31,14 +40,8 @@ namespace IntCodeComputer {
             } 
         }
 
-        public void Run(List<int> userInputs = null) {            
-            var calculationResult1 = computer.Calculate(userInputs, returnOnOutPut: true);
-            var calculationResult2 = computer.Calculate(returnOnOutPut: true);
-
-            while(!calculationResult1.finished && !calculationResult2.finished) {
-                //Thread.Sleep(100);
-                //PaintGrid();
-
+        public void Run() {            
+            if (!calculationResult1.finished && !calculationResult2.finished) {                
                 PaintPanel((int)calculationResult1.output);
 
                 Move((int)calculationResult2.output);
@@ -46,10 +49,7 @@ namespace IntCodeComputer {
                 var colorOfCurrentPos = panels[posY][posX] == "." ? 0 : 1;
                 calculationResult1 = computer.Calculate(new List<int> { colorOfCurrentPos }, true);
                 calculationResult2 = computer.Calculate(new List<int> { colorOfCurrentPos }, true);
-            }
-
-            PaintGrid();
-            Console.WriteLine(panelsDrawn.Count);
+            }            
         }
 
         public void PaintPanel(int color) {
@@ -133,6 +133,24 @@ namespace IntCodeComputer {
                 Console.WriteLine(gridRow);
             }
             Console.WriteLine("PosX: " + posX + " PosY: " + posY);
+        }
+
+        public void PaintGridMono(SpriteBatch spritebatch, Texture2D texture, int ts) {                    
+            for (int y = 0; y < panels.Count; y++) {                
+                for (int x = 0; x < panels[y].Count; x++) {
+                    if (x == posX && y == posY) {
+                        spritebatch.Draw(texture, new Rectangle(x * ts, y * ts, ts, ts), Color.Red);
+                    }
+                    else {
+                        if (panels[y][x] == ".") {
+                            spritebatch.Draw(texture, new Rectangle(x * ts, y * ts, ts, ts), Color.Black);
+                        } else {
+                            spritebatch.Draw(texture, new Rectangle(x * ts, y * ts, ts, ts), Color.White);
+                        }
+
+                    }
+                }
+            }
         }
     }
 }
