@@ -5,16 +5,30 @@ VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntCodeComputerGraphical", "IntCodeComputerGraphical\IntCodeComputerGraphical.csproj", "{F3B8F6B1-B793-48D2-8EDF-F3F35169EFAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntCodeComputer", "..\IntCodeComputer\IntCodeComputer\IntCodeComputer.csproj", "{6EEDFCFF-8DF2-4517-9535-08D1F427A706}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3B8F6B1-B793-48D2-8EDF-F3F35169EFAA}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{F3B8F6B1-B793-48D2-8EDF-F3F35169EFAA}.Debug|x86.ActiveCfg = Debug|x86
 		{F3B8F6B1-B793-48D2-8EDF-F3F35169EFAA}.Debug|x86.Build.0 = Debug|x86
+		{F3B8F6B1-B793-48D2-8EDF-F3F35169EFAA}.Release|Any CPU.ActiveCfg = Release|x86
 		{F3B8F6B1-B793-48D2-8EDF-F3F35169EFAA}.Release|x86.ActiveCfg = Release|x86
 		{F3B8F6B1-B793-48D2-8EDF-F3F35169EFAA}.Release|x86.Build.0 = Release|x86
+		{6EEDFCFF-8DF2-4517-9535-08D1F427A706}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EEDFCFF-8DF2-4517-9535-08D1F427A706}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EEDFCFF-8DF2-4517-9535-08D1F427A706}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6EEDFCFF-8DF2-4517-9535-08D1F427A706}.Debug|x86.Build.0 = Debug|Any CPU
+		{6EEDFCFF-8DF2-4517-9535-08D1F427A706}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EEDFCFF-8DF2-4517-9535-08D1F427A706}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EEDFCFF-8DF2-4517-9535-08D1F427A706}.Release|x86.ActiveCfg = Release|Any CPU
+		{6EEDFCFF-8DF2-4517-9535-08D1F427A706}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
